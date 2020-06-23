@@ -1,41 +1,52 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author DK
- */
+import java.util.Scanner;
+
 public class P2Q6 {
-    
-   public static double inchToCentimeter (int in){
-        return in *2.54;
-    }
-       
-        public static double CentimerToInch (int cm){
-        return cm / 2.54;
-    }
-    public static void main(String[] args) { 
-        System.out.println("Inches\t\tCentimeters");          
-        
-        for (int i=0;i<=10;i++){
-            
-            System.out.printf("%-12.2f %.2f\n", (double)i,inchToCentimeter(i));
-                   
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Number    SquareRoot");
+
+        for (int i = 0; i <= 20; i++) {
+
+            System.out.printf("%-9d %.4f\n", i, sqrt(i));
+
         }
-         System.out.printf("\n");
-           
-        for (int i=5;i<=50;i+=5){
-            
-            System.out.printf("%-12.2f %.2f\n", (double)i,CentimerToInch(i));
-                   
+
+    }
+
+    public static double sqrt(double x) {
+
+        double l=0, u=0;
+        double mid, smid;
+
+        if (x == 0 || x == 1) {
+            return x;
+        } else if (x < 0) {
+            System.out.println("Error:.......");
+            System.exit(-1);
+        } else if (x > 1) {
+            l = 1;
+            u = x;
+        } else {
+            //x<1 && x>0
+            u = 1;
+            l = x;
         }
-        
-        
-     
-    
-}
+
+        while ( Math.abs((l-u)/l) >= 1.0e-8) {
+            mid = (l + u) / 2;
+            smid = mid * mid;
+
+            if (smid > x) {
+                u = mid;
+            } else {
+                l = mid;
+            }
+        }
+        return(l+u)/2.0;
+    }
     
 }
