@@ -51,6 +51,7 @@ public class TestCarRegistration {
   		//todo:: create car object
   		//todo:: register the car
                 Registration newReg = new Registration(car, selectedType , owner);
+                registration[i] =newReg;
   		scanner.nextLine();
   	}
   
