@@ -21,7 +21,8 @@ public class Registration {
         this.car = car;
         this.carType = carType;
         this.owner = owner;
-        regNo = nextRegNo;
+        regNo=nextRegNo;
+        nextRegNo++;
     }
     public String toString(){
         return String.format("%d %s %s %s", regNo,owner.toString(), car.toString(),carType.toString());

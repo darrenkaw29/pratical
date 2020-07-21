@@ -22,7 +22,7 @@ public class Car {
       
     }
     public String toString(){
-    return String.format("%10s %-11s %-10s %5d %s" , platenumber,color , year);
+    return String.format("%10s %-11s %5d" , platenumber,color , year);
     }
     
     
