@@ -79,7 +79,7 @@ public class Practical4_self_2 {
 
     @Override
     public String toString() {
-        return  "courseTittlel :" + courseTittlel + "\n" + " feesPerStudent :" + feesPerStudent + "\n" + " noOfStudents :" + noOfStudents + "\n" ;
+        return  "course Tittle :" + courseTittlel + "\n" + " Fees :" + feesPerStudent + "\n" + " No.of_Students :" + noOfStudents + "\n" ;
     }
 
      
