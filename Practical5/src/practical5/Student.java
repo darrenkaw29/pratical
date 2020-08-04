@@ -51,10 +51,9 @@ public class Student {
     public static boolean validateStudentID(Student s) {
         if(s.studentID.length() == 6){ 
             
-        if(s.studentID.matches(("[\\w]{1}[\\d]{5}"))){
+        if(s.studentID.matches(("[A-B]{1}[\\d]{5}"))){
         char temp = s.studentID.charAt(0); //A || B
-       
-        if("FAFC".equals(s.school) && (temp == 'A')){  return true;}
+        if(s.school.equals("FAFC") && (temp == 'A')){  return true;}
         else if("FAFB".equals(s.school) && (temp == 'B')){ return true;}
         else{return false;}
        
