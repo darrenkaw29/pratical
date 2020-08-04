@@ -22,16 +22,16 @@ public class T5Q6 {
         if(!Character.isLetter(ch) && !Character.isDigit(ch)){
             return false;
         }else{
-                if(Character.isLowerCase(ch)){
-                    countLowercase++;
+                if(Character.isLowerCase(ch)){countLowercase++;
                 }else if(Character.isDigit(ch)){countDigit++;}
         }
     }
     if(countDigit ==0 || countLowercase ==0){return false;}
     return true;
     }
+    
     public static void main (String[] args){
-    String id ="W123456";
+    String id ="Wa123456";
     System.out.println(validateID(id));
     }
 }
